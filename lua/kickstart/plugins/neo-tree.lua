@@ -3,7 +3,7 @@
 
 ---@module 'lazy'
 ---@type LazySpec
-return {
+local item = {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
   dependencies = {
@@ -12,7 +12,6 @@ return {
     'MunifTanjim/nui.nvim',
   },
   lazy = false,
-  priority = 1000,
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
@@ -28,3 +27,5 @@ return {
     },
   },
 }
+
+return {}

@@ -1,6 +1,7 @@
+---@type LazySpec
 return {
   'mikavilpas/yazi.nvim',
-  version = '*',
+  version = '*', -- use the latest stable version
   event = 'VeryLazy',
   dependencies = {
     { 'nvim-lua/plenary.nvim', lazy = true },
@@ -29,8 +30,6 @@ return {
   opts = {
     -- if you want to open yazi instead of netrw, see below for more info
     open_for_directories = true,
-    yazi_floating_window_border = 'none',
-    floating_window_scaling_factor = 1,
     keymaps = {
       show_help = '<f1>',
     },
