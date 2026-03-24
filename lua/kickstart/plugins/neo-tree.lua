@@ -3,7 +3,7 @@
 
 ---@module 'lazy'
 ---@type LazySpec
-local item = {
+return {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
   dependencies = {
@@ -15,10 +15,14 @@ local item = {
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
-  ---@module 'neo-tree'
-  ---@type neotree.Config
   opts = {
+    use_libuv_file_watcher = false,
+    enable_git_status = true,
+    enable_diagnostics = true,
     filesystem = {
+      filtered_items = {
+        visible = false,
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
@@ -27,5 +31,3 @@ local item = {
     },
   },
 }
-
-return {}
